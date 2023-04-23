@@ -3,113 +3,53 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'NannumGothic' , 'sans-serif';
-  font-size: 15px;
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: 400;
-  color: #C8E5AF; 
 }
-
 a {
   text-decoration: none;
-  color: #C8E5AF;
-  /* display: block; */
+  color: #d4ebce;
 }
-
 img {
   display: block;
 }
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* HEADER */
-header {
-  background-color: transparent;
-  color: #fff;
-  max-width: 1480px;
-  position: fixed;
-  top: 46px;
-  z-index: 9;
-}
-header .ent-name {
-  font-size: 32px;
-  color: #C8E5AF;
-  text-align: center;
-}
-header .main-header {
+header .inner {
+  max-width: 1680px;
+  background-color: #000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  
-}
-header .main-header img {
-  width: 39.98px;
-  height: 39.98px;
-}
-header .main-header .material-icons {
-  font-size: 36px; 
-  margin-top: 3px;
-  color: #C8E5AF;
-}
-header .main-header .main-nav > ul {
-  display: flex;
   justify-content: space-between;
-}
-header .main-header .main-nav > ul > li {
-  margin-left: 45px;
-}
 
-/* SECTION */
-section {
-  background-color: #000;
-  position: relative;
+  margin: 30px 10px;
 }
-/* 유튜브 */
-.youtube {
-  position: relative;
-  height: 1080px;
-  background-color: #000;
-  overflow: hidden;
+/* header .logo-text {
+  background-color: #333;
+} */
+header .logo-text > a {
+  font-size: 46px;
+  font-weight: bold;
 }
-.youtube .youtube__area {
-  width: 1920px;
-  height: 1080px;
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: calc(1920px / -2); 
-  margin-top: calc(1080px / -2); 
+header .sns-nav {
+  background-color: #999;
 }
-#player {
-  width: 100%;
-  height: 100%;
+header .sns-nav img {
+  width: 32px;
+  height: 32px;
 }
-/* 동작 방지 */
-.youtube .youtube__cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(0, 0, 0, .3);
+header .sns-nav .material-icons {
+  font-size: 36px;
+  color: #d4ebce;
 }
-
-.artist-recent-activity .sub-nav {
-  width: 10%;
-  height: 500px;
-  position: absolute;
-  top: 200px;
-  right: -50%;
-  transition: .8s;
+header .sns-nav > ul {
+  display: flex;
+  align-items: center;
 }
-.artist-recent-activity .sub-nav.active {
-  right: 25px;
-}
-.artist-recent-activity .sub-nav ul {
-  background-color: rgba(0, 0, 0, .05);
-  text-align: right;
-}
-.artist-recent-activity .sub-nav ul > li + li {
-  margin-top: 60px;
-}
-.artist-recent-activity .sub-nav ul > li > a {
-  font-size: 26px;
+header .sns-nav > ul > li + li {
+  margin-left: 32px;
 }
