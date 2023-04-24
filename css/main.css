@@ -53,3 +53,22 @@ header .sns-nav > ul > li + li {
 /* SECTION */
 /* PROMOTION */
 /* YOUTUBE */
+.promotion .youtube {
+  position: relative;
+  height: 700px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+.promotion .youtube .youtube__area {
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+}
+.promotion #player {
+  width: 100%;
+  height: 100%;
+}
