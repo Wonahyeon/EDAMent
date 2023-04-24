@@ -5,6 +5,8 @@
 body {
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 400;
+  color: #d4ebce;
+  
 }
 a {
   text-decoration: none;
@@ -17,6 +19,26 @@ img {
   max-width: 1680px;
   margin: 0 auto;
 }
+
+/* 영역 간격 */
+.mt-200 {
+  margin-top: 200px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+
+/* 폰트 색깔 */
+.color-dark {
+  color: #1b3420;
+}
+.color-light {
+  color: #d4ebce;
+}
+
 /* HEADER */
 header {
   position: relative;
@@ -34,19 +56,16 @@ header .logo-text {
   position: relative;
 }
 header .logo-text > a {
-  font-size: 46px;
+  font-size: 64px;
   font-weight: bold;
 }
-header .sns-nav {
-  /* background-color: #999; */
-}
+
 header .sns-nav img {
   width: 32px;
   height: 32px;
 }
 header .sns-nav .material-icons {
   font-size: 36px;
-  color: #d4ebce;
 }
 header .sns-nav > ul {
   display: flex;
@@ -60,14 +79,31 @@ header .sns-nav > ul > li + li {
 /* PROMOTION-PLAYER */
 
 /* SUB MENU */
+.promotion-player {
+  position: relative;
+}
+/* TODO 확대축소시 생각한 자리에 고정되도록 */
 .promotion-player .sub-nav {
-  width: 50%;
-  height: 228px;
+  width: 15%;
+  height: 500px;
   position: absolute;
+  top: 150px;
   right: -50%;
+  transition: .8s;
+  z-index: 1;
+}
+.promotion-player .sub-nav.active {
+  right: 10%;
 }
 .promotion-player .sub-nav ul {
+  background-color: rgba(0, 0, 0, .05);
   text-align: right;
+}
+.promotion-player .sub-nav ul > li + li {
+  margin-top: 60px;
+}
+.promotion-player .sub-nav ul > li > a {
+  font-size: 26px;
 }
 
 /* YOUTUBE */
@@ -80,7 +116,6 @@ header .sns-nav > ul > li + li {
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
 }
 .promotion-player .youtube .youtube__area {
@@ -92,25 +127,48 @@ header .sns-nav > ul > li + li {
   width: 100%;
   height: 100%;
 }
+.youtube .youtube__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, .03);
+}
+
+/* PROMOTION-TITLE */
+.promotion-title {
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+}
+.promotion-content.active {
+  display: block;
+}
 
 /* PROMOTION-CONTENT */
 /* 수평 슬라이드 */
 /* TODO슬라이드 내용 정가운데 */
 .promotion-content {
-  margin-top: 100px;
-  background-color: transparent;
+  display: none;
 }
 .promotion-content .inner {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .promotion-content .swiper {
   width: calc(252px * 4 + 120px * 3);
   height: 360px;
   flex-shrink: 0;
 }
 .promotion-content .material-icons {
-  color: #d4ebce;
   font-size: 36px;
   font-weight: bold;
 }
@@ -118,3 +176,17 @@ header .sns-nav > ul > li + li {
 .promotion-content .swiper-button-next::after {
   display: none;
 }
+
+/* PROMOTION-DESCRIPTION */
+.promotion-content .promotion-description h2 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 72px;
+  text-align: center;
+}
+.promotion-content .promotion-description p {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+
