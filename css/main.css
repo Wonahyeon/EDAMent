@@ -18,11 +18,17 @@ img {
   margin: 0 auto;
 }
 /* HEADER */
+header {
+  position: relative;
+  z-index: 9;
+  top: 10px;
+}
 header .inner {
   /* background-color: #000; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 header .logo-text {
   position: relative;
@@ -32,7 +38,7 @@ header .logo-text > a {
   font-weight: bold;
 }
 header .sns-nav {
-  background-color: #999;
+  /* background-color: #999; */
 }
 header .sns-nav img {
   width: 32px;
@@ -51,24 +57,64 @@ header .sns-nav > ul > li + li {
 }
 
 /* SECTION */
-/* PROMOTION */
+/* PROMOTION-PLAYER */
+
+/* SUB MENU */
+.promotion-player .sub-nav {
+  width: 50%;
+  height: 228px;
+  position: absolute;
+  right: -50%;
+}
+.promotion-player .sub-nav ul {
+  text-align: right;
+}
+
 /* YOUTUBE */
-.promotion .youtube {
+.promotion-player .youtube {
   position: relative;
+  top: -80px;
+  width: 100vw;
   height: 700px;
-  background-color: #333;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 
   overflow: hidden;
 }
-.promotion .youtube .youtube__area {
+.promotion-player .youtube .youtube__area {
   width: 1920px;
   height: 1080px;
   position: absolute;
 }
-.promotion #player {
+.promotion-player #player {
   width: 100%;
   height: 100%;
+}
+
+/* PROMOTION-CONTENT */
+/* 수평 슬라이드 */
+/* TODO슬라이드 내용 정가운데 */
+.promotion-content {
+  margin-top: 100px;
+  background-color: transparent;
+}
+.promotion-content .inner {
+  position: relative;
+  display: flex;
+}
+.promotion-content .swiper {
+  width: calc(252px * 4 + 120px * 3);
+  height: 360px;
+  flex-shrink: 0;
+}
+.promotion-content .material-icons {
+  color: #d4ebce;
+  font-size: 36px;
+  font-weight: bold;
+}
+.promotion-content .swiper-button-prev::after,
+.promotion-content .swiper-button-next::after {
+  display: none;
 }
