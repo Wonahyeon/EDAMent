@@ -14,23 +14,19 @@ img {
   display: block;
 }
 .inner {
-  max-width: 1200px;
+  max-width: 1680px;
   margin: 0 auto;
 }
-
 /* HEADER */
 header .inner {
-  max-width: 1680px;
-  background-color: #000;
+  /* background-color: #000; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: 30px 10px;
 }
-/* header .logo-text {
-  background-color: #333;
-} */
+header .logo-text {
+  position: relative;
+}
 header .logo-text > a {
   font-size: 46px;
   font-weight: bold;
@@ -53,3 +49,7 @@ header .sns-nav > ul {
 header .sns-nav > ul > li + li {
   margin-left: 32px;
 }
+
+/* SECTION */
+/* PROMOTION */
+/* YOUTUBE */
