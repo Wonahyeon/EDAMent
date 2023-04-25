@@ -24,20 +24,27 @@ new Swiper('.promotion-content .swiper', {
 
 // 스크롤 내리면 promotion content 나타남
 
-const promotionPlayer = document.querySelector('.promotion-player');
-const promotionContent = document.querySelector('.promotion-content');
+// const promotionPlayer = document.querySelector('.promotion-player');
+// const promotionContent = document.querySelector('.promotion-content');
 
-window.addEventListener('scroll',function () {
-  if (window.scrollY > 0) {
-    promotionContent.classList.add('active');
-    promotionPlayer.classList.add('active');
-  }
-});
+// window.addEventListener('scroll',function () {
+//   if (window.scrollY > 0) {
+//     promotionContent.classList.add('active');
+//     promotionPlayer.classList.add('active');
+//   }
+// });
 
 // TODO버튼 누르면 다시 원래대로
-const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
+// const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
 
-scrollUpBtn.addEventListener('click', function () {
-  promotionPlayer.classList.remove('active');
-  promotionContent.classList.remove('active');
-});
+// scrollUpBtn.addEventListener('click', function () {
+//   promotionPlayer.classList.remove('active');
+//   promotionContent.classList.remove('active');
+// });
+
+
+
+// FOOTER
+// 현재 연도 표시
+const thisYear = document.querySelector('.copyright .this-year');
+thisYear.textContent = new Date().getFullYear();
