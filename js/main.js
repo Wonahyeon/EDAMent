@@ -1,7 +1,7 @@
-// main header btn-menu 클릭하면
-// promotion-player sub-nav 나타남
+// main header main-nav sub-menu
+
 const menuBtn = document.querySelector('header .sns-nav .btn-menu');
-const navSub = document.querySelector('.promotion-player .sub-nav');
+const navSub = document.querySelector('header .sub-nav');
 
 console.log(navSub);
 
@@ -22,11 +22,22 @@ new Swiper('.promotion-content .swiper', {
   }
 });
 
-// promotion-title 클릭하면 promotion-content 나타남
+// 스크롤 내리면 promotion content 나타남
 
-const promotionToggle = document.querySelector('.promotion-title');
+const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
 
-promotionToggle.addEventListener('click', function() {
-  promotionContent.classList.toggle('active');
-})
+window.addEventListener('scroll',function () {
+  if (window.scrollY > 0) {
+    promotionContent.classList.add('active');
+    promotionPlayer.classList.add('active');
+  }
+});
+
+// TODO버튼 누르면 다시 원래대로
+const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
+
+scrollUpBtn.addEventListener('click', function () {
+  promotionPlayer.classList.remove('active');
+  promotionContent.classList.remove('active');
+});
