@@ -76,9 +76,17 @@ header .sns-nav img {
   width: 32px;
   height: 32px;
 }
-header .sns-nav .material-icons {
+header .sns-nav .btn-menu {
   font-size: 36px;
 }
+
+/* BTN-MENU HOVER */
+header .sns-nav .btn-menu:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+}
+
 header .sns-nav > ul {
   display: flex;
   align-items: center;
