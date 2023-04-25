@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/edam.css">
   
   <!-- js -->
   <!-- SWIPER(8버전으로 진행) -->
@@ -35,11 +36,9 @@
 
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- YOUTUBE -->
-  <script src="./js/youtube.js"></script>
   
   <script defer src="./js/main.js"></script>
+  <script defer src="./js/edam.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -86,93 +85,9 @@
   </header>
 
 
-  <!-- SECTION PROMOTION
-    : ARTIST RECENT ACTIVITY -->
-  <!-- YOUTUBE -->
-  <section class="promotion-player">
+  <!-- edam info text -->
+  <section>
 
-    <!-- 유튜브 영상 영역-->
-      <div class="youtube">
-        <div class="youtube__area">
-          <div id="player"></div>
-          <div class="youtube__cover"></div>
-        </div>
-      </div>
-      
-      <!-- PROMOTION-TITLE -->
-      <div class="promotion-derection">
-        <span class="material-icons scroll-down-btn color-light">south</span>
-      </div>
-  </section>
-
-  
-
-  <!--  PROMOTION-CONTENT -->
-  <section class="promotion-content">
-    <div class="inner mt-300">
-      <!-- PROMOTION-TITLE -->
-      <div class="promotion-title">
-        <h1 class="color-white">배우 아이유<br>영화 드림</h1>
-      </div>
-      <!-- 수평 슬라이드 -->
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/poster.png" alt="영화 드림 포스터">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-1.png" alt="영화 드림 스틸컷">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-2.png" alt="영화 드림 스틸컷">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-3.png" alt="영화 드림 스틸컷">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-4.png" alt="영화 드림 스틸컷">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-5.png" alt="영화 드림 예고 캡쳐">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-6.png" alt="영화 드림 예고 캡쳐">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-7.png" alt="영화 드림 예고 캡쳐">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-8.png" alt="영화 드림 예고 캡쳐">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-9.png" alt="영화 드림 예고 캡쳐">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/iu/dream/image-10.png" alt="영화 드림 예고 캡쳐">
-          </div>
-        </div>
-      </div>
-      <div class="swiper-button-prev">
-        <span class="material-icons color-white">arrow_back_ios</span>
-      </div>
-      <div class="swiper-button-next">
-        <span class="material-icons color-white ">arrow_forward_ios</span>
-      </div>
-      <!-- PROMOTION DESCRIPION -->
-      <div class="promotion-description mt-100 color-white">
-        <div class="release-date mt-100">
-          <h2>개봉<br>2023년 4월 26일</h2>
-        </div>
-        <div class="desctiption mt-100">
-          <h2>브로커 전에 크랭크인 했던 드림 3년만에 오셨다!!</h2>
-          <h2 class="mt-50">열정리스 이소민 피디님이 되어 돌아온 아이유!</h2>
-          <p>
-            선수 생활 사상 최악의 위기를 맞은 쏘울리스 축구 선수 홍대(박서준) 계획도, 의지도 없던 홈리스 풋볼 월드컵 감독으로 재능기부에 나서게 된다. 각본 없는 각본(?)으로 열정리스 현실파 PD 소민(아이유)이 다큐 제작으로 합류하게 되면서 뜯어진 운동화와 슬리퍼, 늘어진 반팔 티셔츠를 필두로 운동이라고 한 번도 해본 적 없는 특별한(!) 선수들이 국가대표로 선발된다. 택견인지 축구인지 헷갈리는 실력과 발보다 말이 앞서는 홈리스 선수들의 환장할 팀워크, 다큐에 대사와 상황 그리고 진정성 없는 연출을 강요하는 소민에 기가 막히는 감독 홍대 하지만 포기할 틈도 없이, 월드컵 출전일은 코앞으로 다가오는데...! 이들의 도전은 성공할 수 있을까? 쏘울리스 감독, 열정리스 PD, 그리고 홈리스 국대 부족한 것 투성인 드림팀의 생애 단 한 번의 기회!
-          </p>
-        </div>
-        <!-- SCROLL UP BTN -->
-      <div class="material-icons scroll-up-btn">north</div>
-    </div>
   </section>
 
   <!-- FOOTER -->
