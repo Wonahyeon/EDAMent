@@ -13,9 +13,10 @@ html {
 }
 
 body {
+  font-size: 20px;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 400;
-  color: #d4ebce;
+  color: #fff;
   /* footer 하단 고정하기 위해서 */
   display: flex;
   flex-direction: column;
@@ -78,6 +79,7 @@ header .sns-nav { padding: 27px; }
 header .logo-text > a {
   font-size: 64px;
   font-weight: bold;
+  text-shadow: #999 1px 1px 2px ;
 }
 
 header .sns-nav img {
@@ -86,6 +88,7 @@ header .sns-nav img {
 }
 header .sns-nav .btn-menu {
   font-size: 36px;
+  text-shadow: #999 1px 1px 2px 
 }
 
 /* BTN-MENU HOVER */
@@ -168,17 +171,27 @@ header .sub-nav ul > li > a {
   background-color:rgba(0, 0, 0, .03);
 }
 
-/* PROMOTION-TITLE */
-.promotion-player .promotion-title {
-  font-size: 35px;
-  line-height: 50px;
+.promotion-player .scroll-down-btn {
+  display: block;
+  width: 50px;
+  font-size: 40px;
   font-weight: bold;
-  text-align: center;
   position: absolute;
-  top: 400px;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: 2s linear 1s infinite running fadeoutdown;
 }
-
+@keyframes fadeoutdown {
+  from {
+    opacity: 1;
+    transform: translateY(-130px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
 .promotion-content {
   height: 0;
   opacity: 0;
@@ -192,6 +205,18 @@ header .sub-nav ul > li > a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+/* PROMOTION-TITLE */
+.promotion-content .promotion-title {
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* 수평 슬라이드 */
@@ -223,7 +248,7 @@ header .sub-nav ul > li > a {
   text-align: center;
 }
 .promotion-content .promotion-description p {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 60px;
   padding: 200px;
 }
@@ -246,15 +271,13 @@ header .sub-nav ul > li > a {
 /* FOOTER  */
 /* FOOTER-MENU */
 footer {
-  margin: 200px 0 100px;
-  
+  margin: 200px; 
 }
-
 footer .footer-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 footer .footer-menu ul {
@@ -267,7 +290,6 @@ footer .footer-menu ul > li {
 }
 footer .footer-menu ul > li > a {
   color: #333;
-  font-size: 20px;
 }
 footer .footer-menu .logo-text a {
   font-size: 52px;
@@ -285,8 +307,7 @@ footer .footer-menu ul li:hover a {
 
 /* COPYRIGHT */
 footer .copyright {
-  font-size: 20px;
   color: #333;
   text-align: center;
-  padding: 50px 0;
+  padding: 20px;
 }
