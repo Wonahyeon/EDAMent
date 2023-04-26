@@ -10,20 +10,19 @@ header .sns-nav .btn-menu {
   text-shadow: none;
 }
 header .sub-nav {
+  width: 250px;
   background-color: #d4ebce;
   top: 80px;
   height: 380px;
-  padding: 0 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 header .sub-nav ul {
   text-align: center;
 }
 header .sub-nav ul li {
-  background-color: none;
   display: block;
-  border-radius: none;
 }
 header .sub-nav ul li a {
   color: #fff;
