@@ -77,9 +77,8 @@ header .sns-nav { padding: 27px; }
 
 
 header .logo-text > a {
-  font-size: 64px;
+  font-size: 35px;
   font-weight: bold;
-  text-shadow: #999 1px 1px 2px ;
 }
 
 header .sns-nav img {
@@ -131,8 +130,11 @@ header .sub-nav ul > li + li {
 }
 header .sub-nav ul > li > a {
   font-size: 26px;
+  transition: .4s;
 }
-
+header .sub-nav ul > li:hover > a {
+  font-weight: bold;
+}
 
 /* SECTION */
 /* PROMOTION-PLAYER */
@@ -292,7 +294,7 @@ footer .footer-menu ul > li > a {
   color: #999;
 }
 footer .footer-menu .logo-text a {
-  font-size: 52px;
+  font-size: 40px;
   font-weight: bold;
 }
 footer .footer-menu .footer-menu-left,

@@ -1,0 +1,11 @@
+/* HEADER */
+header {
+  background-color: #d4ebce;
+}
+header .logo-text > a {
+  color: #fff;
+}
+header .sns-nav .btn-menu {
+  color: #fff;
+  text-shadow: none;
+}
