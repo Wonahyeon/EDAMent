@@ -1,8 +1,12 @@
+body {
+  color: #d4ebce;
+}
+
 /* HEADER */
 header {
   background-color: #d4ebce;
 }
-header .logo-text > a {
+header .logo-text > a  {
   color: #fff;
 }
 header .sns-nav .btn-menu {
@@ -27,3 +31,69 @@ header .sub-nav ul li {
 header .sub-nav ul li a {
   color: #fff;
 }
+/* SECTION */
+/* EDAM INFO TEXT */
+
+section.info-text .inner {
+  display: flex;
+  flex-direction: column;
+}
+section.info-text .block {
+  flex: 1;
+}
+section.info-text .edam-name {
+  display: flex;
+  animation: fadeInLeft;
+  animation-duration: 1s;
+  
+}
+section.info-text .edam-name > span {
+  font-size: 72px;
+  font-weight: bold;
+  padding: 50px;
+  flex: 1;
+}
+section.info-text .edam-description {
+  display: flex;
+  animation: fadeInRight;
+  animation-duration: 1.5s;
+}
+section.info-text .edam-description > p {
+  font-size: 36px;
+  text-align: right;
+  padding: 50px;
+  flex: 5;
+}
+
+
+/* SECTION */
+/* EDAM ADDRESS INFO */
+section.address-info .inner {
+  display: flex;
+  flex-direction: column;
+}
+section.address-info .block {
+  flex: 1;
+}
+section.address-info .address-text {
+  display: flex;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+section.address-info .address-text > span {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 50px;
+  flex: 1;
+}
+section.address-info .address-map {
+  display: flex;
+  animation: fadeInRight;
+  animation-duration: 2.5s;
+}
+
+section.address-info .address-map > .map {
+  padding: 50px;
+  flex: 3;
+}
+
