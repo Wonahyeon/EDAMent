@@ -41,6 +41,21 @@ window.addEventListener('scroll',function () {
   }
 });
 
+const header = document.querySelector('header');
+
+// TODO sub-nav promotion-content에서 보이도록
+window.addEventListener('scroll',function () {
+  if (window.scrollY > 560) {
+    gsap.to(header,0.4,{
+      display: 'none',
+    });
+  } else {
+    gsap.to(header,0.4,{
+      display: 'block',
+    });
+  } 
+});
+
 // SCROLL UP BTN 누르면
 const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
 
