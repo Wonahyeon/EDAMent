@@ -22,6 +22,8 @@ new Swiper('.promotion-content .swiper', {
 });
 
 // 스크롤 내리면
+// 보임: promotion-content
+// 안보임: promotion-player footer
 const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
 
@@ -31,28 +33,46 @@ window.addEventListener('scroll',function () {
   if (window.scrollY > 0) {
     gsap.to(promotionContent,0.4,{
       opacity: 1,
-      display: 'block'
+      display: 'block',
     });
+
   } else {
     gsap.to(promotionContent,0.4,{
       opacity: 0,
       display: 'none'
     });
+    gsap.to(promotionPlayer,0.4,{
+      opacity: 1,
+      display: 'block'
+    });
   }
 });
 
-const header = document.querySelector('header');
+// sub-nav promotion-content에서 보이도록
+const navSubBc = navSub.querySelectorAll('li');
+const navSubText = navSub.querySelectorAll('a');
+const logoText = document.querySelector('header .logo-text > a');
 
-// TODO sub-nav promotion-content에서 보이도록
+
 window.addEventListener('scroll',function () {
-  if (window.scrollY > 560) {
-    gsap.to(header,0.4,{
-      display: 'none',
+  if (window.scrollY > 350) {
+    navSubBc.forEach(function (bc) {
+      bc.classList.add('bc-change');
     });
+    navSubText.forEach(function(tc){
+      tc.classList.add('color-change');
+    });
+    menuBtn.classList.add('color-white');
+    logoText.classList.add('color-white');
   } else {
-    gsap.to(header,0.4,{
-      display: 'block',
+    navSubBc.forEach(function (bc) {
+      bc.classList.remove('bc-change');
     });
+    navSubText.forEach(function(tc){
+      tc.classList.remove('color-change');
+    });
+    menuBtn.classList.remove('color-white');
+    logoText.classList.remove('color-white');
   } 
 });
 

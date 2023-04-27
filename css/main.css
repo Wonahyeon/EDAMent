@@ -1,10 +1,51 @@
+
+/* HEADER */
+header {
+  background-color: transparent;
+}
+header .logo-text > a,
+header .sns-nav .btn-menu {
+  color: #d4ebce;
+}
+header .logo-text > a.color-white,
+header .sns-nav .btn-menu.color-white {
+  color: #fff;
+}
+
+/* BTN-MENU HOVER */
+header .sns-nav .btn-menu:hover {
+  color: #d4ebce;
+  background-color: rgba(255, 255, 255, .5);
+}
+header .sub-nav {
+  background-color: transparent;
+}
+header .sub-nav ul {
+  text-align: right;
+}
+header .sub-nav ul li {
+  background-color: rgba(255, 255, 255, .05);
+  display: block;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+}
+header .sub-nav ul li a {
+  color: #d4ebce;
+}
+
+header .sub-nav ul .bc-change {
+  background-color: rgba(255, 255, 255, .5);
+}
+header .sub-nav ul li .color-change {
+  color: #1b3420;
+}
+
 /* SECTION */
 /* PROMOTION-PLAYER */
 
 /* YOUTUBE */
 .promotion-player {
-  max-width: 100%;
-  min-width: 100%;
   position: relative;
   top: 0;
 }
@@ -12,7 +53,7 @@
   position: relative;
   top: -120px;
   width: 100vw;
-  height: 700px;
+  height: 800px;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -134,49 +175,7 @@
 
 
 
-/* FOOTER  */
-/* FOOTER-MENU */
-footer {
-  margin: 0 100px; 
-}
-footer .footer-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-footer .footer-menu ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-footer .footer-menu ul > li {
-  flex-shrink: 0;
-}
-footer .footer-menu ul > li > a {
-  color: #999;
-}
-footer .footer-menu .logo-text a {
-  font-size: 40px;
-  font-weight: bold;
-}
-footer .footer-menu .footer-menu-left,
-footer .footer-menu .footer-menu-right {
-  width: 40%;
-}
 
-/* HOVER */
-footer .footer-menu ul li:hover a {
-  font-weight: bold;
-}
-
-/* COPYRIGHT */
-footer .copyright {
-  color: #999;
-  text-align: center;
-  padding: 20px;
-}
 
 /* 반응형 */
 /* footer 요소 겹칠때 로고 안보이게 */
