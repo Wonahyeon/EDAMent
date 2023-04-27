@@ -39,6 +39,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <script defer src="../js/main.js"></script>
+  <script defer src="../js/modal.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -72,7 +73,6 @@
           </li>
         </ul>
       </div>
-      <!-- 유튜브 영상 영역 위로 보이는 서브메뉴 -->
       <nav class="sub-nav">
         <ul>
           <li><a href="../pages/edam.html">EDAM</a></li>
@@ -84,14 +84,62 @@
     </div>
   </header>
 
-
-  <!-- edam info text -->
-  <section>
-
+  <!-- SECTION -->
+  <!-- ARTIST -->
+  <section class="profile mt-300">
+    <div class="inner">
+      <div class="produce">
+        <span>ARTIST</span>
+        <div class="block"></div>
+      </div>
+      <div class="artists mt-200">
+        <div class="artist" id="iu">
+          <a href="#">
+            <img src="../images/artist/profile-artist-1.png" alt="아이유 프로필 사진">
+          </a>
+        </div>
+        <div class="artist">
+          <a href="#">
+            <img src="../images/artist/profile-artist-2.png" alt="신세경 프로필 사진">
+          </a>
+        </div>
+        <div class="artist">
+          <a href="#">
+            <img src="../images/artist/profile-artist-3.png" alt="우즈 프로필 사진">
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- MODAL -->
+  <!-- IU -->
+  <div class="modal" id="modal-iu">
+    <div class="modal-content">
+      <a href="#" class="btn-close color-dark material-icons">close</a>
+      <div class="modal-body color-dark">
+        <h2>IU</h2>
+        <h3>이지은 1993년 5월 16일</h3>
+        <!-- 수평 슬라이드 -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/iu/dream/poster.png" alt="영화 드림 포스터">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/iu/dream/image-1.png" alt="영화 드림 스틸컷">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/iu/dream/image-2.png" alt="영화 드림 스틸컷">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <!-- FOOTER -->
-  <footer>
+  <footer class="mt-200">
     <!-- 가운데 정렬 -->
     <div class="inner">
       <!-- 왼쪽 -->

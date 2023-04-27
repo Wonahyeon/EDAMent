@@ -1,0 +1,105 @@
+/* SECTION */
+/* ARTIST PROFILE */
+.profile {
+  flex: 1;
+}
+.profile .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 1;
+}
+.profile .inner .produce {
+  width: 100%;
+  display: flex;
+  padding: 50px;
+}
+.profile .inner .produce span {
+  font-size: 100px;
+  font-weight: bold;
+  flex: 1;
+}
+.profile .inner .produce .block {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+}
+
+.profile .artists {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.profile .artists .artist {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.profile .artists img {
+  width: 480px;
+  height: 568px;
+}
+
+/* MODAL */
+/* 공통 */
+.modal {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  animation: slidefade 0.35s linear;
+  padding: 20px;
+}
+.modal-content .btn-close {
+  position: absolute;
+  right: 18px;
+}
+.modal .modal-content .modal-body {
+  padding: 30px;
+}
+.modal .modal-content .modal-body h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.modal .modal-content .modal-body img {
+  width: 30%;
+  height: 30%;
+}
+.modal.active {
+  display: block;
+}
+
+
+
+
+
+
+
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

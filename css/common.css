@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  height: 100vh;
   font-size: 14px;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 400;
@@ -140,9 +141,6 @@ header .sub-nav ul > li:hover > a {
 
 /* FOOTER  */
 /* FOOTER-MENU */
-footer {
-  padding-bottom: 20%;
-}
 footer .footer-menu {
   display: flex;
   justify-content: space-between;
