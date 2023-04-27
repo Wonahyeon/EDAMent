@@ -3,6 +3,8 @@
 
 /* YOUTUBE */
 .promotion-player {
+  max-width: 100%;
+  min-width: 100%;
   position: relative;
   top: 0;
 }
@@ -135,7 +137,7 @@
 /* FOOTER  */
 /* FOOTER-MENU */
 footer {
-  margin: 100px; 
+  margin: 0 100px; 
 }
 footer .footer-menu {
   display: flex;
