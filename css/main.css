@@ -2,6 +2,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
 /* HEADER */
 header {
   background-color: transparent;
@@ -10,9 +11,9 @@ header .logo-text > a,
 header .sns-nav .btn-menu {
   color: #fff;
 }
-header .logo-text > a.color-light,
-header .sns-nav .btn-menu.color-light {
-  color: #d4ebce;
+header .logo-text > a.color-point,
+header .sns-nav .btn-menu.color-point {
+  color: #B7A1F7;
 }
 
 /* BTN-MENU HOVER */
@@ -41,16 +42,16 @@ header .sub-nav ul .bc-change {
   background-color: rgba(255, 255, 255, .5);
 }
 header .sub-nav ul li .color-change {
-  color: #1b3420;
+  color: #B7A1F7;
 }
 
-/* TODO flex로 배치 */
 /* SECTION */
 /* PROMOTION-PLAYER */
 
 
 /* YOUTUBE */
 .promotion-player {
+  flex: 1;
   position: relative;
   top: 0;
 }
@@ -104,11 +105,14 @@ header .sub-nav ul li .color-change {
   margin: auto;
   animation: 1s linear 1s infinite running bounce;
 }
+.promotion-player .scroll-down-btn:hover {
+  color: #B7A1F7;
+}
 
 .promotion-content {
   opacity: 0;
   transition: .8s;
-  background-color: #fff;
+  background-color: #d4ebce;
   /* footer 하단 고정하기 위해 */
   flex: 1;
 }
@@ -122,6 +126,7 @@ header .sub-nav ul li .color-change {
 
 /* 수평 슬라이드 */
 .promotion-content .swiper {
+  flex: 1;
   width: calc(251px * 5 + 50px * 4);
   height: 360px;
 }
@@ -141,6 +146,18 @@ header .sub-nav ul li .color-change {
 
 
 /* PROMOTION-DESCRIPTION */
+.promotion-content .promotion-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promotion-content .promotion-description .release-date,
+.promotion-content .promotion-description .desctiption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .promotion-content .promotion-description h2 {
   font-size: 20px;
   font-weight: bold;
@@ -150,34 +167,41 @@ header .sub-nav ul li .color-change {
 .promotion-content .promotion-description p {
   line-height: 60px;
   padding: 0 200px;
+  display: block;
+  width: 1000px;
 }
-
+/* BTN GROUP */
 /* SCROLL UP BTN */
-.promotion-content .promotion-description .scroll-up-btn {
+.promotion-content .promotion-description .btn-group {
+  display: flex;
+}
+.promotion-content .promotion-description .btn-group .material-icons {
   font-size: 50px;
-  text-align: center;
   display: block;
   width: 50px;
   height: 50px;
-  position: absolute;
-  bottom: 100px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin-bottom: 50px;
   cursor: pointer;
 }
-.promotion-content .promotion-description .scroll-up-btn:hover {
-  font-size: 55px;
+.promotion-content .promotion-description .btn-group .material-icons:hover {
+  color: #B7A1F7;
 }
-
-
+.promotion-content .promotion-description .btn-group .youtube-link-btn a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  bottom: 50px;
+}
 
 
 
 @media screen and (max-width: 767px) {
   /* SECTION */
-  section.promotion-content {
+  section.promotion-player {
     width: 100%;
   }
-  
+  section.promotion-content {
+    padding-top: 200px;
+  }
 }

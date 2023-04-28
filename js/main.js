@@ -28,6 +28,18 @@ const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
 
 
+const scrollDownBtn = promotionPlayer.querySelector('.promotion-direction');
+scrollDownBtn.addEventListener('click', function(){
+  gsap.to(promotionPlayer,0.1,{
+    opacity: 0,
+    display: 'none',
+  });
+  gsap.to(promotionContent,0.1,{
+    opacity: 1,
+    display: 'block',
+  });
+  
+});
 
 window.addEventListener('scroll',function () {
   if (window.scrollY > 0) {
@@ -35,19 +47,21 @@ window.addEventListener('scroll',function () {
       opacity: 1,
       display: 'block',
     });
-
   } else {
     gsap.to(promotionContent,0.4,{
       opacity: 0,
-      display: 'none'
+      display: 'none',
+      flex: 0,
     });
   }
 });
+
 
 // sub-nav promotion-content에서 보이도록
 const navSubBc = navSub.querySelectorAll('li');
 const navSubText = navSub.querySelectorAll('a');
 const logoText = document.querySelector('header .logo-text > a');
+
 
 
 window.addEventListener('scroll',function () {
@@ -58,8 +72,6 @@ window.addEventListener('scroll',function () {
     navSubText.forEach(function(tc){
       tc.classList.add('color-change');
     });
-    menuBtn.classList.add('color-white');
-    logoText.classList.add('color-white');
   } else {
     navSubBc.forEach(function (bc) {
       bc.classList.remove('bc-change');
@@ -67,8 +79,6 @@ window.addEventListener('scroll',function () {
     navSubText.forEach(function(tc){
       tc.classList.remove('color-change');
     });
-    menuBtn.classList.remove('color-white');
-    logoText.classList.remove('color-white');
   } 
 });
 
@@ -78,6 +88,15 @@ const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
 scrollUpBtn.addEventListener('click',function () {
   if(window.scrollY > 0) {
     window.scrollTo(0,0);
+    gsap.to(promotionPlayer,0.1,{
+      opacity: 1,
+      display: 'block',
+    });
+  } else {
+    gsap.to(promotionPlayer,0.1,{
+      opacity: 0,
+      display: 'none',
+    });
   }
 });
 
