@@ -124,7 +124,6 @@ header .sub-nav ul li .color-change {
 .promotion-content .swiper {
   width: calc(251px * 5 + 50px * 4);
   height: 360px;
-  flex-shrink: 0;
 }
 .promotion-content .material-icons {
   font-size: 36px;

@@ -34,7 +34,7 @@
 }
 .profile .artists .artist {
   width: 30%;
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -71,7 +71,7 @@
 .modal-content {
   background-color: #fff;
   width: 90%;
-  height: 90%;
+  height: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -79,23 +79,66 @@
   border-radius: 10px;
   animation: slidefade 0.35s;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-content .modal-content-header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-content .sns-nav {
+  width: 80px;
+  height: 20px;
+}
+.modal-content .sns-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-content .sns-nav .sns img {
+  width: 20px;
+  height: 20px;
 }
 .modal-content .btn-close {
-  position: absolute;
-  right: 18px;
+  font-size: 20px
 }
 .modal .modal-content .modal-body {
-  padding: 30px;
+  padding: 20px;
 }
+
 .modal .modal-content .modal-body h2 {
+  flex: 1;
   color: #d4ebce;
   font-size: 32px;
   font-weight: bold;
 }
-.modal .modal-content .modal-body img {
-  width: 30%;
-  height: 30%;
+.modal .modal-content .modal-body .modal-body-title {
+  display: flex;
 }
+.modal .modal-content .modal-body .modal-body-content img {
+  width: 100px;
+}
+/* 수평 슬라이드 */
+.modal .swiper {
+  margin-top: 30px;
+  width: calc(100px * 5 + 20px * 4);
+  height: 120px;
+  flex-shrink: 0;
+}
+.modal .swiper-button-prev::after,
+.modal .swiper-button-next::after {
+  display: none;
+}
+.modal .swiper-button-prev,
+.modal .swiper-button-next {
+  top: 70%;
+}
+.modal .swiper-button-prev {
+  left: 50px;
+}
+.modal .swiper-button-next {
+  right: 50px;
+}
+
 .modal.active {
   display: block;
 }
@@ -109,5 +152,23 @@
   100% {
     opacity: 1;
     margin-top: 0;
+  }
+}
+
+/* 반응형 */
+@media screen and (max-width: 747px) {
+  .profile .inner .produce span {
+    text-align: center;
+  }
+  .profile .inner .produce .block {
+    flex: 0;
+  }
+  .profile .artists {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile .artists .artist {
+    margin-bottom: 20px;
+    flex-direction: row;
   }
 }
