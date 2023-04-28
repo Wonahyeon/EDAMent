@@ -1,15 +1,18 @@
-
+/* 스크롤 감춤 */
+::-webkit-scrollbar {
+  display: none;
+}
 /* HEADER */
 header {
   background-color: transparent;
 }
 header .logo-text > a,
 header .sns-nav .btn-menu {
-  color: #d4ebce;
-}
-header .logo-text > a.color-white,
-header .sns-nav .btn-menu.color-white {
   color: #fff;
+}
+header .logo-text > a.color-light,
+header .sns-nav .btn-menu.color-light {
+  color: #d4ebce;
 }
 
 /* BTN-MENU HOVER */
@@ -69,13 +72,22 @@ header .sub-nav ul li .color-change {
   width: 100%;
   height: 100%;
 }
-.youtube .youtube__cover {
+.promotion-player .youtube .youtube__cover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color:rgba(0, 0, 0, .03);
+}
+/* PROMOTION-TITLE */
+.promotion-player .promotion-title {
+  font-size: 35px;
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  bottom: 300px;
 }
 
 .promotion-player .scroll-down-btn {
@@ -84,26 +96,17 @@ header .sub-nav ul li .color-change {
   font-size: 40px;
   font-weight: bold;
   position: absolute;
+  top: 80%;
   left: 0;
   right: 0;
   margin: auto;
-  animation: 2s linear 1s infinite running fadeoutdown;
+  animation: 1s linear 1s infinite running bounce;
 }
-@keyframes fadeoutdown {
-  from {
-    opacity: 1;
-    transform: translateY(-130px);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-}
+
 .promotion-content {
-  height: 0;
   opacity: 0;
   transition: .8s;
-  background-color: #d4ebce;
+  background-color: #fff;
   /* footer 하단 고정하기 위해 */
   flex: 1;
 }
@@ -113,18 +116,7 @@ header .sub-nav ul li .color-change {
   flex-direction: column;
   align-items: center;
 }
-/* PROMOTION-TITLE */
-.promotion-content .promotion-title {
-  font-size: 35px;
-  line-height: 50px;
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  top: -7%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
+
 
 /* 수평 슬라이드 */
 .promotion-content .swiper {
@@ -149,15 +141,14 @@ header .sub-nav ul li .color-change {
 
 /* PROMOTION-DESCRIPTION */
 .promotion-content .promotion-description h2 {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 52px;
   text-align: center;
 }
 .promotion-content .promotion-description p {
-  font-size: 36px;
   line-height: 60px;
-  padding: 200px;
+  padding: 0 200px;
 }
 
 /* SCROLL UP BTN */
@@ -171,38 +162,22 @@ header .sub-nav ul li .color-change {
   left: 0;
   right: 0;
   margin: auto;
+  cursor: pointer;
+}
+.promotion-content .promotion-description .scroll-up-btn:hover {
+  color: #fff;
+  background-color: #d4ebce;
+  border-radius: 50%;
 }
 
 
 
 
 
-/* 반응형 */
-/* footer 요소 겹칠때 로고 안보이게 */
-@media screen and (max-width: 894px)  {
-  footer .footer-menu .logo-text a {
-    opacity: 0;
-  }
-}
 @media screen and (max-width: 767px) {
-  .inner {
-    max-width: 767px;
-    margin: 0 20px;
-  }
-  /* HEADER */
-  header .sns-nav .sns {
-    display: none;
-  }
   /* SECTION */
   section.promotion-content {
     width: 100%;
   }
-  /* FOOTER */
-  footer {
-    margin: 0;
-  }
-  footer .footer-menu {
-    flex-shrink: 0;
-    border-bottom: none;
-  }
+  
 }

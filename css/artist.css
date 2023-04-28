@@ -16,7 +16,7 @@
   padding: 50px;
 }
 .profile .inner .produce span {
-  font-size: 100px;
+  font-size: 40px;
   font-weight: bold;
   flex: 1;
 }
@@ -26,21 +26,30 @@
   flex: 1;
 }
 
-.profile .artists {
+.profile .artists { 
   width: 100%;
-  height: 30%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
 }
 .profile .artists .artist {
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.profile .artists img {
-  width: 480px;
-  height: 568px;
+.profile .artists .artist img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.profile .artists .artist h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
 }
 
 /* MODAL */
@@ -86,11 +95,6 @@
 .modal.active {
   display: block;
 }
-
-
-
-
-
 
 
 @keyframes slidefade {

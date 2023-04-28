@@ -15,7 +15,7 @@ section.info-text .edam-name {
   
 }
 section.info-text .edam-name > span {
-  font-size: 72px;
+  font-size: 52px;
   font-weight: bold;
   padding: 50px;
   flex: 1;
@@ -26,14 +26,13 @@ section.info-text .edam-description {
   animation-duration: 1.5s;
 }
 section.info-text .edam-description > p {
-  font-size: 36px;
+  font-size: 20px;
   text-align: right;
+  font-weight: bold;
   padding: 50px;
   flex: 5;
 }
 
-
-/* SECTION */
 /* EDAM ADDRESS INFO */
 section.address-info .inner {
   display: flex;
@@ -48,7 +47,7 @@ section.address-info .address-text {
   animation-duration: 2s;
 }
 section.address-info .address-text > span {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: bold;
   padding: 50px;
   flex: 1;
@@ -64,3 +63,27 @@ section.address-info .address-map > .map {
   flex: 3;
 }
 
+/* 반응형 */
+@media screen and (max-width: 767px) {
+  section.info-text .block,
+  section.address-info .block {
+    flex: 0;
+  }
+  section.info-text .edam-name {
+    text-align: center;
+  }
+  section.info-text .edam-description {
+    width: 100%;
+    height: 100%;
+  }
+  section.info-text .edam-description > p,
+  section.address-info .address-text > span {
+    text-align: center;
+  }
+  section.address-info .address-map > .map {
+    flex: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+}

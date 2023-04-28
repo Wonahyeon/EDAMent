@@ -41,10 +41,6 @@ window.addEventListener('scroll',function () {
       opacity: 0,
       display: 'none'
     });
-    gsap.to(promotionPlayer,0.4,{
-      opacity: 1,
-      display: 'block'
-    });
   }
 });
 

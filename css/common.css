@@ -179,3 +179,51 @@ footer .copyright {
   text-align: center;
   padding: 20px;
 }
+
+/* 반응형 */
+/* footer 요소 겹칠때 로고 안보이게 */
+@media screen and (max-width: 894px)  {
+  footer .footer-menu .logo-text a {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    max-width: 767px;
+    margin: 0 20px;
+  }
+  /* HEADER */
+  header .sns-nav .sns {
+    display: none;
+  }
+  
+  /* FOOTER */
+  footer {
+    margin: 0;
+  }
+  footer .footer-menu {
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  footer .footer-menu ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer-menu .logo-text a {
+    display: none;
+  }
+  footer .footer-menu .footer-menu-left,
+  footer .footer-menu .footer-menu-right {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  footer .copyright {
+    padding-top: 0;
+  }
+}
