@@ -1,3 +1,4 @@
+// 아이유
 const modalIU = document.querySelector('.modal#modal-iu');
 const modalIuOpen = document.querySelector('.profile .artists .artist#iu');
 
@@ -9,18 +10,27 @@ const modalIuClose = modalIU.querySelector('.btn-close');
 modalIuClose.addEventListener('click',function(){
   modalIU.classList.remove('active');
 });
+// 신세경
+const modalSsk = document.querySelector('.modal#modal-ssk');
+const modalSskOpen = document.querySelector('.profile .artists .artist#ssk');
 
-
-// 수평 슬라이드
-new Swiper('.modal .swiper',{
-  loop: true,
-  autoplay: true,
-  slidesPerView: 5,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: '.modal .swiper-button-next',
-    prevEl: '.modal .swiper-button-prev'
-  }
+modalSskOpen.addEventListener('click',function(){
+  modalSsk.classList.add('active');
 });
 
-// TODO 반응형 slidesPerView 달리 보이게 하기
+const modalSskClose = modalSsk.querySelector('.btn-close');
+modalSskClose.addEventListener('click',function(){
+  modalSsk.classList.remove('active');
+});
+// 우즈
+const modalWz = document.querySelector('.modal#modal-wz');
+const modalWzOpen = document.querySelector('.profile .artists .artist#wz');
+
+modalWzOpen.addEventListener('click',function(){
+  modalWz.classList.add('active');
+});
+
+const modalWzClose = modalWz.querySelector('.btn-close');
+modalWzClose.addEventListener('click',function(){
+  modalWz.classList.remove('active');
+});
