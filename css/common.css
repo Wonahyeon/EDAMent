@@ -17,14 +17,14 @@ body {
   font-size: 14px;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 400;
-  color: #d4ebce;
+  color: #C8E5AF;
   /* footer 하단 고정하기 위해서 */
   display: flex;
   flex-direction: column;
 }
 a {
   text-decoration: none;
-  color: #d4ebce;
+  color: #C8E5AF;
 }
 img {
   display: block;
@@ -57,7 +57,7 @@ img {
   color: #1b3420;
 }
 .color-light {
-  color: #d4ebce;
+  color: #C8E5AF;
 }
 .color-white {
   color: #fff;
@@ -65,7 +65,7 @@ img {
 
 /* HEADER */
 header {
-  background-color: #d4ebce;
+  background-color: #C8E5AF;
   width: 100vw;
   position: fixed;
   z-index: 9;
@@ -98,7 +98,7 @@ header .sns-nav .btn-menu {
 
 /* BTN-MENU HOVER */
 header .sns-nav .btn-menu:hover {
-  color: #d4ebce;
+  color: #C8E5AF;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -111,7 +111,7 @@ header .sns-nav > ul > li + li {
 }
 /* SUB MENU */
 header .sub-nav {
-  background-color: #d4ebce;
+  background-color: #C8E5AF;
   width: 250px;
   height: 380px;
   position: absolute;
@@ -120,7 +120,7 @@ header .sub-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: 0; */
+  opacity: 0;
   transition: .8s;
 }
 header .sub-nav.active {

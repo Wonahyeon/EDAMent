@@ -26,8 +26,6 @@ new Swiper('.promotion-content .swiper', {
 // 안보임: promotion-player footer
 const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
-
-
 const scrollDownBtn = promotionPlayer.querySelector('.promotion-direction');
 scrollDownBtn.addEventListener('click', function(){
   gsap.to(promotionPlayer,0.1,{
@@ -46,7 +44,8 @@ window.addEventListener('scroll',function () {
     gsap.to(promotionContent,0.4,{
       opacity: 1,
       display: 'block',
-    });
+    }); 
+    promotionContent.scrollTo(0,0);
   } else {
     gsap.to(promotionContent,0.4,{
       opacity: 0,
@@ -55,7 +54,6 @@ window.addEventListener('scroll',function () {
     });
   }
 });
-
 
 // sub-nav promotion-content에서 보이도록
 const navSubBc = navSub.querySelectorAll('li');
@@ -84,7 +82,7 @@ window.addEventListener('scroll',function () {
 
 // SCROLL UP BTN 누르면
 const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
-
+console.log(scrollUpBtn);
 scrollUpBtn.addEventListener('click',function () {
   if(window.scrollY > 0) {
     window.scrollTo(0,0);

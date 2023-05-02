@@ -18,7 +18,7 @@ header .sns-nav .btn-menu.color-point {
 
 /* BTN-MENU HOVER */
 header .sns-nav .btn-menu:hover {
-  color: #d4ebce;
+  color: #C8E5AF;
   background-color: rgba(255, 255, 255, .5);
 }
 header .sub-nav {
@@ -35,7 +35,7 @@ header .sub-nav ul li {
   border-radius: 10px;
 }
 header .sub-nav ul li a {
-  color: #d4ebce;
+  color: #C8E5AF;
 }
 
 header .sub-nav ul .bc-change {
@@ -86,11 +86,11 @@ header .sub-nav ul li .color-change {
 /* PROMOTION-TITLE */
 .promotion-player .promotion-title {
   font-size: 35px;
-  line-height: 60px;
+  line-height: 40px;
   font-weight: bold;
   text-align: center;
   position: relative;
-  bottom: 300px;
+  bottom: 360px;
 }
 
 .promotion-player .scroll-down-btn {
@@ -99,7 +99,7 @@ header .sub-nav ul li .color-change {
   font-size: 40px;
   font-weight: bold;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 0;
   right: 0;
   margin: auto;
@@ -110,9 +110,9 @@ header .sub-nav ul li .color-change {
 }
 
 .promotion-content {
-  opacity: 0;
+  /* opacity: 0; */
   transition: .8s;
-  background-color: #d4ebce;
+  background-color: #C8E5AF;
   /* footer 하단 고정하기 위해 */
   flex: 1;
 }

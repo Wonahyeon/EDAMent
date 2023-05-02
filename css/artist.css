@@ -30,33 +30,35 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
 }
 .profile .artists .artist {
-  width: 30%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
   position: relative;
   cursor: pointer;
 }
 
 .profile .artists .artist img {
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 354px;
   border-radius: 20px;
 }
 .profile .artists .artist h3 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
   padding: 10px;
+  white-space: nowrap;
+  width: 100px;
 }
 .profile .artists .artist:hover img {
-  border: 5px solid #d4ebce;
+  border: 5px solid #C8E5AF;
 }
 .profile .artists .artist:hover h3 {
-  font-size: 25px;
+  font-weight: bold;
 }
 
 
@@ -113,7 +115,7 @@
 
 .modal .modal-content .modal-body h2 {
   flex: 1;
-  color: #d4ebce;
+  color: #C8E5AF;
   font-size: 32px;
   font-weight: bold;
 }
@@ -159,7 +161,7 @@
 }
 
 /* 반응형 */
-@media screen and (max-width: 747px) {
+@media screen and (max-width: 767px) {
   .profile .inner .produce span {
     text-align: center;
   }
@@ -169,9 +171,11 @@
   .profile .artists {
     flex-direction: column;
     align-items: center;
+    width: 80%;
   }
   .profile .artists .artist {
     margin-bottom: 20px;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
