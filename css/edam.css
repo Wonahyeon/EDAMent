@@ -25,12 +25,16 @@ section.info-text .edam-description {
   animation: fadeInRight;
   animation-duration: 1.5s;
 }
-section.info-text .edam-description > p {
+section.info-text .edam-description > pre {
   font-size: 20px;
+  line-height: 30px;
   text-align: right;
   font-weight: bold;
   padding: 50px;
   flex: 5;
+}
+section.info-text .edam-description > p {
+  display: none;
 }
 
 /* EDAM ADDRESS INFO */
@@ -60,7 +64,7 @@ section.address-info .address-map {
 
 section.address-info .address-map > .map {
   padding: 50px;
-  flex: 3;
+  flex: 1;
 }
 
 /* 반응형 */
@@ -76,14 +80,22 @@ section.address-info .address-map > .map {
     width: 100%;
     height: 100%;
   }
-  section.info-text .edam-description > p,
+  section.info-text .edam-description > pre {
+    display: none;
+  }
+  section.info-text .edam-description > p {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    font-weight: bold;
+    padding: 50px;
+    flex: 5;
+  }
+
+
   section.address-info .address-text > span {
     text-align: center;
-  }
-  section.address-info .address-map > .map {
-    flex: 0;
-    width: 100%;
-    height: 100%;
   }
   
 }

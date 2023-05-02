@@ -26,7 +26,7 @@ new Swiper('.promotion-content .swiper', {
 // 안보임: promotion-player footer
 const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
-const scrollDownBtn = promotionPlayer.querySelector('.promotion-direction');
+const scrollDownBtn = document.querySelector('.scroll-down-btn');
 scrollDownBtn.addEventListener('click', function(){
   gsap.to(promotionPlayer,0.1,{
     opacity: 0,
@@ -82,7 +82,6 @@ window.addEventListener('scroll',function () {
 
 // SCROLL UP BTN 누르면
 const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
-console.log(scrollUpBtn);
 scrollUpBtn.addEventListener('click',function () {
   if(window.scrollY > 0) {
     window.scrollTo(0,0);
@@ -98,8 +97,8 @@ scrollUpBtn.addEventListener('click',function () {
   }
 });
 
+
 // FOOTER
 // 현재 연도 표시
 const thisYear = document.querySelector('.copyright .this-year');
 thisYear.textContent = new Date().getFullYear(); 
-
