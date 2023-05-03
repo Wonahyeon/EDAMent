@@ -1,0 +1,114 @@
+.contact {
+  flex: 1;
+}
+.contact .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .inner .contact-title {
+  display: flex;
+  padding: 50px;
+  width: 100%;
+  height: 80px;
+  align-content: center;
+}
+.contact .inner .contact-title  span {
+  font-size: 50px;
+  font-weight: bold;
+}
+.contact .inner .contact-title .block {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+}
+.contact .inner .email {
+  width: 100%;
+  padding: 50px;
+}
+.contact .inner .email h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.contact .inner .email .block {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+}
+.contact .suggestions,
+.contact .reports { 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .suggestion,
+.contact .report {
+  background-color: #cfcfcf;
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+.contact .suggestion:hover,
+.contact .report:hover {
+  border: 1px solid #000;
+}
+.contact .report {
+  background-color: #999;
+}
+.contact .suggestions .suggestion h2,
+.contact .reports .report h2 {
+  color: #000;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  width: 500px;
+}
+
+.contact .suggestions .suggestion h3,
+.contact .reports .report h3 {
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  width: 500px;
+}
+
+
+
+footer {
+  position: relative;
+  bottom: -100%;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1200px) {
+  .contact .suggestion,
+  .contact .report {
+    width: 300px;
+    transition: .8s;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .suggestions,
+  .contact .reports {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .suggestion,
+  .contact .report {
+    transition: .8s;
+    height: 200px;
+    margin-bottom: 50px;
+  }
+}

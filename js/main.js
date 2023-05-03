@@ -131,8 +131,11 @@ scrollUpBtn.addEventListener('click',function () {
 
 
 
-
 // FOOTER
 // 현재 연도 표시
 const thisYear = document.querySelector('.copyright .this-year');
 thisYear.textContent = new Date().getFullYear(); 
+
+
+// 뒤로가기
+window.history.forward();
