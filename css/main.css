@@ -127,8 +127,9 @@ header .sub-nav ul li .color-change {
 /* 수평 슬라이드 */
 .promotion-content .swiper {
   flex: 1;
-  width: calc(251px * 5 + 50px * 4);
+  width: 90%;
   height: 360px;
+
 }
 .promotion-content .material-icons {
   font-size: 36px;
@@ -141,6 +142,9 @@ header .sub-nav ul li .color-change {
 .promotion-content .swiper-button-prev,
 .promotion-content .swiper-button-next {
   top: 13%;
+}
+.swiper-button-next {
+  right: 0;
 }
 
 

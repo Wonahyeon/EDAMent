@@ -7,7 +7,7 @@
   <title>EDAM Ent IU PROFILE</title>
 
   <!-- 파비콘 -->
-  <link rel="icon" href="./favicon.png">
+  <link rel="icon" href="../favicon.ico">
 
   <!-- 스타일 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
@@ -78,7 +78,7 @@
           <li><a href="../pages/edam.html">EDAM</a></li>
           <li><a href="../pages/artist.html" style="font-weight: bold;">ARTIST</a></li>
           <li><a href="../pages/notice.html" >NOTICE</a></li>
-          <li><a href="https://madeedam.com/main/index.php">madeEDAM</a></li>
+          <li><a href="https://madeedam.com/main/index.php" target="_blank">madeEDAM</a></li>
         </ul>
       </nav>
     </div>
@@ -121,6 +121,38 @@
           <li class="movie">영화</li>
         </ul>
         <div class="block"></div>
+      </div>
+      <div class="category-content album iu-album show">
+        <div class="category-item">
+          <img src="../images/artist/iu/singer/piece.png" alt="조각집 앨범 표지">
+          <span>조각집<br>2021.12.29</span>
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/iu/singer/strawberrymoon.png" alt="스트로베리문 디싱 표지">
+          <span>strawberry moon<br>2021.10.19</span>
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/iu/singer/lilac.png" alt="라일락 앨범 표지">
+          <span>IU 5th Album 'LILAC'<br>2021.03.25</span>
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/iu/singer/eight.png" alt="에잇 디싱 표지">
+          <span>에잇<br>2020.05.06</span>
+        </div>
+      </div>
+      <div class="category-content iu-drama">
+        <div class="category-item">
+          <img src="../images/artist/iu/actor/hoteldeluna.png" alt="호텔 델루나 포스터">
+          <span>호텔 델루나 장만월 역<br>2019.07.13. ~ 2019.09.01</span> 
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/iu/actor/mymister.png" alt="나의 아저씨 포스터">
+          <span>나의 아저씨 이지안 역 <br>2018.03.21. ~ 2018.05.17</span>
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/iu/actor/moon.png" alt="달연 보보경심려 포스터">
+          <span>달의 연인 - 보보경심 려 해수 역 <br>2016.08.29. ~ 2016.11.01</span>
+        </div>
       </div>
       <div class="category-content iu-movie">
         <div class="category-item">
@@ -184,11 +216,57 @@
   </footer>
 
   <script>
+    const iuAlbum = document.querySelector('.category  #iu .album');
+    const iuAlbumList = document.querySelector('.category-content.iu-album');
+    const iuDrama = document.querySelector('.category #iu .drama');
+    const iuDramaList = document.querySelector('.category-content.iu-drama');
+    console.log(iuDrama);
     const iuMovie = document.querySelector('.category #iu .movie');
     const iuMovieList = document.querySelector('.category-content.iu-movie');
+
+    // 앨범
+    iuAlbum.addEventListener('click', function(){
+      if ((iuAlbumList.classList.contains('show')),
+      iuDramaList.classList.contains('show'),
+      iuMovieList.classList.contains('show')
+      ) {
+        iuDramaList.classList.remove('show');
+        iuMovieList.classList.remove('show');
+      } else {
+        iuAlbumList.classList.add('show');
+        iuDramaList.classList.remove('show');
+        iuMovieList.classList.remove('show');
+      }
+    });
+    
+    // 드라마
+    iuDrama.addEventListener('click', function(){
+      if (iuDramaList.classList.contains('show'),
+      iuAlbumList.classList.contains('show'),
+      iuMovieList.classList.contains('show')
+      ) {
+        iuAlbumList.classList.remove('show');
+        iuMovieList.classList.remove('show');
+      } else {
+        iuDramaList.classList.add('show');
+        iuAlbumList.classList.remove('show');
+        iuMovieList.classList.remove('show');
+      }
+    });
+    
+    //영화
     iuMovie.addEventListener('click', function(){
-    iuMovieList.classList.toggle('show');
-    iuMovie.classList.toggle('show');
+      if (iuDramaList.classList.contains('show'),
+      iuAlbumList.classList.contains('show'),
+      iuMovieList.classList.contains('show')
+      ) {
+        iuAlbumList.classList.remove('show');
+        iuDramaList.classList.remove('show');
+      } else {
+        iuMovieList.classList.add('show');
+        iuAlbumList.classList.remove('show');
+        iuDramaList.classList.remove('show');
+      }
     });
   </script>
 </body>

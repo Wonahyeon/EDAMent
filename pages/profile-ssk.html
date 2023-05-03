@@ -7,7 +7,7 @@
   <title>EDAM Ent SSK PROFILE</title>
 
   <!-- 파비콘 -->
-  <link rel="icon" href="./favicon.png">
+  <link rel="icon" href="../favicon.ico">
 
   <!-- 스타일 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
@@ -77,7 +77,7 @@
           <li><a href="../pages/edam.html">EDAM</a></li>
           <li><a href="../pages/artist.html" style="font-weight: bold;">ARTIST</a></li>
           <li><a href="../pages/notice.html">NOTICE</a></li>
-          <li><a href="https://madeedam.com/main/index.php">madeEDAM</a></li>
+          <li><a href="https://madeedam.com/main/index.php" target="_blank">madeEDAM</a></li>
         </ul>
       </nav>
     </div>
@@ -116,11 +116,11 @@
       <div class="category"> 
         <ul id="ssk">
           <li class="drama">드라마</li>
-          <li class="album">영화</li>
+          <li class="movie">영화</li>
         </ul>
         <div class="block"></div>
       </div>
-      <div class="category-content drama ssk-drama">
+      <div class="category-content drama ssk-drama show">
         <div class="category-item">
           <img src="../images/artist/ssk/drama1.png" alt="런온 포스터">
           <span>런온 오미주 역<br>2020.12.16. ~ 2021.02.04.</span>
@@ -133,6 +133,16 @@
           <img src="../images/artist/ssk/drama3.png" alt="흑기사 포스터">
           <span>흑기사 정해라 역<br>2017.12.06. ~ 2018.02.08</span>
         </div>
+      </div>
+      <div class="category-content movie ssk-movie">
+        <div class="category-item">
+          <img src="../images/artist/ssk/anotherrecord.png" alt="어나더레코드 포스터">
+          <span>어나더레코드<br>2021. </span>
+        </div>
+        <div class="category-item">
+          <img src="../images/artist/ssk/game.png" alt="타짜 2 포스터">
+          <span>타짜-신의 손 허미나 역<br>2014.09.03</span>
+        </di v>
       </div>
     </div>
   </section>
@@ -187,10 +197,31 @@
 
   <script>
     const sskDrama = document.querySelector('.category #ssk .drama');
-    const sskDramaList = document.querySelector('.category-content.drama');
+    const sskDramaList = document.querySelector('.category-content.ssk-drama');
+    const sskMovie = document.querySelector('.category #ssk .movie');
+    const sskMovieList = document.querySelector('.category-content.ssk-movie');
+   // 드라마
     sskDrama.addEventListener('click', function(){
-    sskDramaList.classList.toggle('show');
-    sskDrama.classList.toggle('show');
+      if (sskDramaList.classList.contains('show'),
+      sskMovieList.classList.contains('show')
+      ) {
+        sskMovieList.classList.remove('show');
+      } else {
+        sskDramaList.classList.add('show');
+        sskMovieList.classList.remove('show');
+      }
+    });
+    //영화
+    sskMovie.addEventListener('click', function(){
+      console.log('ddd');
+      if (sskDramaList.classList.contains('show'),
+      sskMovieList.classList.contains('show')
+      ) {
+        sskDramaList.classList.remove('show');
+      } else {
+        sskMovieList.classList.add('show');
+        sskDramaList.classList.remove('show');
+      }
     });
   </script>
 </body>

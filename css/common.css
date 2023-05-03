@@ -161,6 +161,7 @@ footer .footer-menu ul > li {
 }
 footer .footer-menu ul > li > a {
   color: #999;
+  white-space: nowrap;
 }
 footer .footer-menu .logo-text a {
   font-size: 40px;

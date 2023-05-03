@@ -59,7 +59,7 @@ section .inner {
 }
 .category-content {
   width: 80%;
-  height: 800px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   margin: 0 200px;
@@ -91,25 +91,36 @@ section .inner {
   color: #B7A1F7;
   font-weight: bold;
   line-height: 24px;
+  white-space: nowrap;
 }
 
 /* 카테고리따라 세부 내용 변경 */
-#iu .movie.show,
-#ssk .drama.show,
-#woodz .album.show  {
-  text-decoration: underline;
-}
+.iu-album,
+.iu-drama,
 .iu-movie,
 .ssk-drama,
+.ssk-movie,
 .woodz-album {
   /* display: none; */
+  position:absolute;
+  top: 100%;
   opacity: 0;
   transition: .8s;
 }
+.iu-album.show,
+.iu-drama.show,
 .iu-movie.show,
 .ssk-drama.show,
+.ssk-movie.show,
 .woodz-album.show  {
   opacity: 1;
+  /* display: block; */
+
+}
+
+footer {
+  position: relative;
+  bottom: -100%;
 }
 
 

@@ -13,11 +13,34 @@ menuBtn.addEventListener('click', function () {
 new Swiper('.promotion-content .swiper', {
   loop: true,
   autoplay: true,
-  slidesPerView: 5,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  spaceBetween: 10,
   navigation: {
     nextEl: '.promotion-content .swiper-button-next',
     prevEl: '.promotion-content .swiper-button-prev'
+  },
+  breakpoints: {
+
+    590: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    767: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+
+    1455: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    }
+
   }
 });
 
