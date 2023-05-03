@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EDAM Ent ARTIST</title>
+  <title>EDAM Ent IU PROFILE</title>
 
   <!-- 파비콘 -->
   <link rel="icon" href="./favicon.png">
@@ -23,8 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
   <link rel="stylesheet" href="../css/common.css">
-
-  <link rel="stylesheet" href="../css/artist.css">
+  <link rel="stylesheet" href="../css/profile.css">
   
   <!-- js -->
   <!-- SWIPER(8버전으로 진행) -->
@@ -38,7 +37,9 @@
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
+  
   <script defer src="../js/main.js"></script>
+
 </head>
 <body>
   <!-- HEADER -->
@@ -76,48 +77,66 @@
         <ul>
           <li><a href="../pages/edam.html">EDAM</a></li>
           <li><a href="../pages/artist.html" style="font-weight: bold;">ARTIST</a></li>
-          <li><a href="../pages/notice.html">NOTICE</a></li>
+          <li><a href="../pages/notice.html" >NOTICE</a></li>
           <li><a href="https://madeedam.com/main/index.php">madeEDAM</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- SECTION -->
-  <!-- ARTIST -->
-  <section class="profile mt-100">
-    <div class="inner"> 
-      <div class="produce">
-        <span>ARTIST</span>
+  <section>
+    <div class="inner">
+      <div class="profile mt-50">
+        <div class="profile-text">
+          <h2>아이유(IU, 이지은)</h2>
+          <h3>출생 1993년 5월 16일</h3>
+          <h3>가수   ·   배우</h3>
+          <!-- SNS NAV -->
+          <div class="sns-nav mt-10">
+            <ul>
+              <li class="sns">
+                <a href="https://www.youtube.com/@dlwlrma" target="_blank">
+                  <img src="../images/icon/icon-youtube-p.png" alt="유튜브 로고">
+                </a>
+              </li> 
+              <li class="sns">
+                <a href="https://www.instagram.com/dlwlrma/" target="_blank">
+                  <img src="../images/icon/icon-insta-p.png" alt="인스타 로고">
+                </a>
+              </li>
+              <li class="sns">
+                <a href="https://twitter.com/_IUofficial" target="_blank">
+                  <img src="../images/icon/icon-twt-p.png" alt="트위터 로고">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="../images/artist/profile-artist-1.png" alt="아이유 프로필">
+      </div>
+      <div class="category">
+        <ul id="iu">
+          <li class="album">앨범</li>
+          <li class="drama">드라마</li>
+          <li class="movie">영화</li>
+        </ul>
         <div class="block"></div>
       </div>
-      <div class="artists">
-        <div class="artist" id="iu">
-          <h3>아이유</h3>
-          <a href="../pages/profile-iu.html">
-            <img src="../images/artist/profile-artist-1.png" alt="아이유 프로필 사진">
-          </a>
+      <div class="category-content iu-movie">
+        <div class="category-item">
+          <img src="../images/iu/dream/poster.png" alt="드림 포스터">
+          <span>드림 이소민 역<br>2023.04.26</span>
         </div>
-        <div class="artist" id="ssk">
-          <h3>신세경</h3>
-          <a href="../pages/profile-ssk.html">
-            <img src="../images/artist/profile-artist-2.png" alt="신세경 프로필 사진">
-          </a>
+        <div class="category-item">
+          <img src="../images/artist/iu/actor/broker-poster.png" alt="브로커 포스터">
+          <span>브로커 소영 역 <br>2022.06.08</span>
         </div>
-        <div class="artist" id="wz">
-          <h3>우즈</h3>
-          <a href="../pages/profile-woodz.html">
-            <img src="../images/artist/profile-artist-3.png" alt="우즈 프로필 사진">
-          </a>
-        </div>
-      </div>
       </div>
     </div>
   </section>
 
-  
   <!-- FOOTER -->
-  <footer class="mt-200">
+  <footer>
     <!-- 가운데 정렬 -->
     <div class="inner">
       <!-- 왼쪽 -->
@@ -137,7 +156,7 @@
         </nav>
         <!-- 로고 -->
         <div class="logo-text">
-          <a href="../index.html" class="color-light">EDAM</a>
+          <a href="./index.html" class="color-light">EDAM</a>
         </div>
         <!-- 오른쪽 -->
         <nav class="footer-menu-right">
@@ -163,5 +182,14 @@
     </p> 
 
   </footer>
+
+  <script>
+    const iuMovie = document.querySelector('.category #iu .movie');
+    const iuMovieList = document.querySelector('.category-content.iu-movie');
+    iuMovie.addEventListener('click', function(){
+    iuMovieList.classList.toggle('show');
+    iuMovie.classList.toggle('show');
+    });
+  </script>
 </body>
 </html> 

@@ -23,7 +23,7 @@ new Swiper('.promotion-content .swiper', {
 
 // 스크롤 내리면
 // 보임: promotion-content
-// 안보임: promotion-player footer
+// 안보임: promotion-player
 const promotionPlayer = document.querySelector('.promotion-player');
 const promotionContent = document.querySelector('.promotion-content');
 const scrollDownBtn = document.querySelector('.scroll-down-btn');
@@ -80,7 +80,15 @@ window.addEventListener('scroll',function () {
   } 
 });
 
-// SCROLL UP BTN 누르면
+// Plus BTN 누르면 prmotion-plus 보임
+const plustBtn = document.querySelector('.promotion-content .plus-btn');
+const promotionPlus = document.querySelector('.promotion-plus');
+
+plustBtn.addEventListener('click', function(){
+  promotionPlus.classList.toggle('show');
+});
+
+// SCROLL UP BTN 누르면 최상단
 const scrollUpBtn = document.querySelector('.promotion-content .scroll-up-btn');
 scrollUpBtn.addEventListener('click',function () {
   if(window.scrollY > 0) {
@@ -95,7 +103,10 @@ scrollUpBtn.addEventListener('click',function () {
       display: 'none',
     });
   }
+  promotionPlus.classList.remove('show');
 });
+
+
 
 
 // FOOTER

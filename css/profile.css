@@ -1,0 +1,127 @@
+section .inner {
+  position: relative;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile .profile-text {
+  padding: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #B7A1F7;
+  width: 500px;
+}
+
+.profile .profile-text .sns-nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+}
+.profile .profile-text .sns-nav .sns img {
+  width: 24px;
+  height: 24px;
+}
+
+.profile img {
+  width: 250px;
+  height: 295x;
+  border-radius: 10px;
+}
+.category {
+  width: 75%;
+  display: flex;
+}
+.category ul {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.category ul li {
+  color: #B7A1F7;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.category .block {
+  flex: 2;
+  position: relative;
+  width: 50%;
+}
+
+.category ul li:hover,
+.category ul li.show {
+  text-decoration: underline;
+}
+.category-content {
+  width: 80%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 200px;
+  padding: 20px; 
+  align-items: center;
+}
+.category-content .category-item {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #B7A1F7;
+}
+/* 영화/드라마 */
+.category-content .category-item img {
+  width: 100px;
+  height: 143px;
+  margin-right: 50px;
+}
+/* 앨범 */
+.category-content.album .category-item img {
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+}
+
+.category-content .category-item span {
+  color: #B7A1F7;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+/* 카테고리따라 세부 내용 변경 */
+#iu .movie.show,
+#ssk .drama.show,
+#woodz .album.show  {
+  text-decoration: underline;
+}
+.iu-movie,
+.ssk-drama,
+.woodz-album {
+  /* display: none; */
+  opacity: 0;
+  transition: .8s;
+}
+.iu-movie.show,
+.ssk-drama.show,
+.woodz-album.show  {
+  opacity: 1;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 767px) {
+  .profile {
+    width: 80%;
+  }
+  .profile img {
+    width: 50%;
+  }
+  .category-content .category-item {
+    width: 100%;
+  }
+}

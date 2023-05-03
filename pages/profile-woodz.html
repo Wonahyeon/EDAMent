@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EDAM Ent ARTIST</title>
+  <title>EDAM Ent WOODZ PROFILE</title>
 
   <!-- 파비콘 -->
   <link rel="icon" href="./favicon.png">
@@ -23,8 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
   <link rel="stylesheet" href="../css/common.css">
-
-  <link rel="stylesheet" href="../css/artist.css">
+  <link rel="stylesheet" href="../css/profile.css">
   
   <!-- js -->
   <!-- SWIPER(8버전으로 진행) -->
@@ -72,6 +71,7 @@
           </li>
         </ul>
       </div>
+      <!-- 유튜브 영상 영역 위로 보이는 서브메뉴 -->
       <nav class="sub-nav">
         <ul>
           <li><a href="../pages/edam.html">EDAM</a></li>
@@ -83,41 +83,63 @@
     </div>
   </header>
 
-  <!-- SECTION -->
-  <!-- ARTIST -->
-  <section class="profile mt-100">
-    <div class="inner"> 
-      <div class="produce">
-        <span>ARTIST</span>
+
+  <section>
+    <div class="inner">
+      <div class="profile mt-50">
+        <div class="profile-text">
+          <h2>우즈(WOODZ, 조승연)</h2>
+          <h3>출생 1996년 8월 5일</h3>
+          <h3>가수</h3>
+          <!-- SNS NAV -->
+          <div class="sns-nav mt-10">
+            <ul>
+              <li class="sns">
+                <a href="https://www.youtube.com/c/WOODZ_dnwm" target="_blank">
+                  <img src="../images/icon/icon-youtube-p.png" alt="유튜브 로고">
+                </a>
+              </li> 
+              <li class="sns">
+                <a href="https://www.instagram.com/woodz_dnwm/" target="_blank">
+                  <img src="../images/icon/icon-insta-p.png" alt="인스타 로고">
+                </a>
+              </li>
+              <li class="sns">
+                <a href="https://twitter.com/_chowoodz" target="_blank">
+                  <img src="../images/icon/icon-twt-p.png" alt="트위터 로고">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="../images/artist/profile-artist-3.png" alt="우즈 프로필">
+      </div>
+      <div class="category"> 
+        <ul id="woodz">
+          <li class="album">앨범</li>
+          <!-- <li class="album">앨범</li> -->
+        </ul>
         <div class="block"></div>
       </div>
-      <div class="artists">
-        <div class="artist" id="iu">
-          <h3>아이유</h3>
-          <a href="../pages/profile-iu.html">
-            <img src="../images/artist/profile-artist-1.png" alt="아이유 프로필 사진">
-          </a>
+      <div class="category-content album woodz-album">
+        <div class="category-item">
+          <img src="../images/artist/wz/OO-LI.png" alt="OO-LI 앨범 표지">
+          <span>OO-LI<br>2023.04.26</span>
         </div>
-        <div class="artist" id="ssk">
-          <h3>신세경</h3>
-          <a href="../pages/profile-ssk.html">
-            <img src="../images/artist/profile-artist-2.png" alt="신세경 프로필 사진">
-          </a>
+        <div class="category-item">
+          <img src="../images/artist/wz/abyss.png" alt="심연 앨범 표지">
+          <span>심연<br>2023.02.22</span>
         </div>
-        <div class="artist" id="wz">
-          <h3>우즈</h3>
-          <a href="../pages/profile-woodz.html">
-            <img src="../images/artist/profile-artist-3.png" alt="우즈 프로필 사진">
-          </a>
+        <div class="category-item">
+          <img src="../images/artist/wz/colorfultrauma.png" alt="COLORFUL TRAUMA 앨범 표지">
+          <span>COLORFUL TRAUMA<br>2022.05.04</span>
         </div>
-      </div>
       </div>
     </div>
   </section>
 
-  
   <!-- FOOTER -->
-  <footer class="mt-200">
+  <footer>
     <!-- 가운데 정렬 -->
     <div class="inner">
       <!-- 왼쪽 -->
@@ -137,7 +159,7 @@
         </nav>
         <!-- 로고 -->
         <div class="logo-text">
-          <a href="../index.html" class="color-light">EDAM</a>
+          <a href="./index.html" class="color-light">EDAM</a>
         </div>
         <!-- 오른쪽 -->
         <nav class="footer-menu-right">
@@ -163,5 +185,14 @@
     </p> 
 
   </footer>
+
+  <script>
+    const wzAlbum = document.querySelector('.category #woodz .album');
+    const wzAlbumList = document.querySelector('.category-content.album');
+    wzAlbum.addEventListener('click', function(){
+    wzAlbumList.classList.toggle('show');
+    wzAlbum.classList.toggle('show');
+    });
+  </script>
 </body>
 </html> 
