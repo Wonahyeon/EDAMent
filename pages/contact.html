@@ -112,7 +112,7 @@
           <h3>woodz-official@gmail.com</h3>
         </div>
       </div>
-      <div class="reports mt-100">
+      <div class="reports mt-200">
         <div class="report">
           <h2>아이유 관련 악플 신고</h2>
           <h3>iufan.report@gmail.com</h3>
@@ -182,7 +182,8 @@
     const report = document.querySelector('.contact .reports');
 
     window.addEventListener('scroll',function () {
-    if (window.scrollY > 200) {
+      // console.log(window.scrollY);
+    if (window.scrollY > 460) {
       gsap.to(report,0.4,{
         opacity: 1,
         display: 'flex',
