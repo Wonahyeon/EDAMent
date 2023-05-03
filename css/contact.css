@@ -101,6 +101,13 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .contact .inner .contact-title .block,
+  .contact .inner .email .block {
+    flex: 0;
+  }
+  .contact .inner .email h2 {
+    text-align: center;
+  }
   .contact .suggestions,
   .contact .reports {
     flex-direction: column;
