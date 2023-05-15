@@ -86,42 +86,42 @@
 
   
   <!-- SECTION -->
-  <!-- ARTIST -->
+  <!-- CONTACT -->
   <section class="contact mt-100">
     <div class="inner"> 
       <div class="contact-title">
         <span>CONTACT</span>
         <div class="block"></div>
       </div>
-      <div class="email mt-100">
+      <div class="email">
         <h2>E-mail<br>
         edam@edam-ent.com</h2>
         <div class="block"></div>
       </div>
-      <div class="suggestions mt-200">
-        <div class="suggestion" id="iu">
-          <h2>아이유 관련 문의/건의</span>
+      <div class="suggestions mt-50">
+        <div class="suggestion">
+          <h2>아이유 관련 문의/건의</h2>
           <h3>iu-official@daum.net</h3>
         </div>
-        <div class="suggestion" id="ssk">
+        <div class="suggestion">
           <h2>신세경 관련 문의/건의</h2>
           <h3>saekyeong-official@gmail.com</h3>
         </div>
-        <div class="suggestion" id="wz">
+        <div class="suggestion">
           <h2>우즈 관련 문의/건의</h2>
           <h3>woodz-official@gmail.com</h3>
         </div>
       </div>
       <div class="reports mt-200">
-        <div class="report" id="iu">
-          <h2>아이유 관련 악플 신고</span>
+        <div class="report">
+          <h2>아이유 관련 악플 신고</h2>
           <h3>iufan.report@gmail.com</h3>
         </div>
-        <div class="report" id="ssk">
+        <div class="report">
           <h2>신세경 관련 악플 신고</h2>
           <h3>saekyeongfan.report@gmail.com</h3>
         </div>
-        <div class="report" id="wz">
+        <div class="report">
           <h2>우즈 관련 악플 신고</h2>
           <h3>woodzfan.report@gmail.com</h3>
         </div>
@@ -182,10 +182,11 @@
     const report = document.querySelector('.contact .reports');
 
     window.addEventListener('scroll',function () {
-    if (window.scrollY > 200) {
+      // console.log(window.scrollY);
+    if (window.scrollY > 460) {
       gsap.to(report,0.4,{
         opacity: 1,
-        display: 'block',
+        display: 'flex',
       }); 
     } else {
       gsap.to(report,0.4,{
