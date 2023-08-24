@@ -2,7 +2,7 @@
 
 ## 기획
 https://www.figma.com/file/XGyI8cmDcJZuYzqVBKcspy/edamEnt?type=design&mode=design&t=q8Z5IMrEOHtvM8Dl-0
-
+![Alt text](edamEnt.png)
 ## 개발 일지
 ## 23.04.24 ~ 23.05.14
 ### 받은 피드백
@@ -13,3 +13,6 @@ JS에러 1건 발생, 그 외엔 준수사항에 맞춰 잘 만드셨습니다. 
 
 ## 23.08.08
 사용한 유튜브 영상 비공개 처리됨
+
+## 23.08.23
+유튜브 영상 변경
