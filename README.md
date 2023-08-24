@@ -1,8 +1,9 @@
-# edamEnt 연예 기획사 웹 페이지
+# 이담엔터테이먼트, 연예 기획사 웹 페이지
 
 ## 기획
 https://www.figma.com/file/XGyI8cmDcJZuYzqVBKcspy/edamEnt?type=design&mode=design&t=q8Z5IMrEOHtvM8Dl-0
 ![Alt text](edamEnt.png)
+
 ## 개발 일지
 ## 23.04.24 ~ 23.05.14
 ### 받은 피드백
